@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="maior" placeholder="digite aqui o valor a ser comparado">
+    <button id="teste" onclick="testar_maior()">testar</button>
+
+    <p id="valor"></p>
+    
+</body>
+
+<script>
+    let maior_ate_agora = 0
+    function testar_maior(){
+        let maior = Number(document.getElementById("maior").value)
+        
+        if( maior > maior_ate_agora){
+            maior_ate_agora = maior
+            //alert("maior até agora")
+            document.getElementById("valor").innerHTML = maior_ate_agora
+        }
+        else{
+            //alert("maior até agora é "+maior)
+        }
+    }
+</script>
+</html>
