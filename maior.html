@@ -5,26 +5,25 @@
     <title>Document</title>
 </head>
 <body>
-
-    <input type="text" id="maior" placeholder="digite aqui o valor a ser comparado">
-    <button id="teste" onclick="testar_maior()">testar</button>
-
-    <p id="valor"></p>
-    
+    <div >
+        <input style="font-size: 400%;" type="text" id="resposta" placeholder="digite aqui o valor a ser comparado">
+        <button style="font-size: 400%;" id="teste" onclick="testar_resposta()">testar</button>
+        <p style="font-size: 400%;" id="valor"></p>
+    </div>
+     
 </body>
-
 <script>
     let maior_ate_agora = 0
-    function testar_maior(){
-        let maior = Number(document.getElementById("maior").value)
+    function testar_resposta(){
+        let resposta = Number(document.getElementById("resposta").value)
         
-        if( maior > maior_ate_agora){
-            maior_ate_agora = maior
-            //alert("maior até agora")
+        if( resposta > maior_ate_agora){
+            maior_ate_agora = resposta
+            //alert("resposta até agora")
             document.getElementById("valor").innerHTML = maior_ate_agora
         }
         else{
-            //alert("maior até agora é "+maior)
+            //alert("resposta até agora é "+resposta)
         }
     }
 </script>
