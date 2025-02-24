@@ -8,7 +8,9 @@
     <div >
         <input style="font-size: 400%;" type="text" id="resposta" placeholder="digite aqui o valor a ser comparado">
         <button style="font-size: 400%;" id="teste" onclick="testar_resposta()">testar</button>
-        <p style="font-size: 400%;" id="valor"></p>
+    </div>
+    <div id="divisao">
+        
     </div>
      
 </body>
@@ -18,9 +20,13 @@
         let resposta = Number(document.getElementById("resposta").value)
         
         if( resposta > maior_ate_agora){
-            maior_ate_agora = resposta
+            maior_ate_agora = resposta;
             //alert("resposta até agora")
-            document.getElementById("valor").innerHTML = maior_ate_agora
+            let novo_paragrafo = document.createElement('p');
+            let divisao = document.getElementById("divisao");
+            novo_paragrafo.setAttribute('id','resultado');
+            divisao.appendChild(novo_paragrafo);
+            document.getElementById("resultado").innerHTML = maior_ate_agora;
         }
         else{
             //alert("resposta até agora é "+resposta)

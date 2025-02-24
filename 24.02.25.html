@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="num_1" placeholder="primeior numero">
+        <input type="text" id="num_2" placeholder="segundo numero">
+        <button onclick="soma()">Somar</button>
+        <p id="operacao"></p>
+    </div>
+</body>
+<script>
+    function soma(){
+        let num_1 = Number(document.getElementById("num_1").value)
+        let num_2 = Number(document.getElementById("num_2").value)
+        const soma = num_1 + num_2
+        document.getElementById("operacao").innerHTML = soma
+
+        //let novo_paragrafo = document.createElement('p');
+        //novo_paragrafo.setAttribute('id','resultado');
+        //document.body.appendChild(novo_paragrafo)
+        //document.getElementById("resultado").innerHTML = soma;
+    }
+</script>
+
+</html>
