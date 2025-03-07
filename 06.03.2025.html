@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto_1">
+    <input type="text" id="texto_2">
+    <button onclick="junta_palavra()">algum</button>
+    <p id="resposta"></p>
+</body>
+<script>
+    function junta_palavra(){
+        let texto_um = document.getElementById("texto_1").value
+        let texto_dois = document.getElementById("texto_2").value
+        let texto_final = texto_um + texto_dois
+        document.getElementById("resposta").innerHTML = texto_final
+    }
+</script>
+</html>
