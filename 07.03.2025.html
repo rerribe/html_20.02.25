@@ -5,13 +5,18 @@
     <title>Document</title>
 </head>
 <body>
- <input type="text" id="nome">
- <button onclick="nome()">nome</button>   
+                                            <!-- os comentarios em html são feitos dentro desse sinal -->
+                                            <!-- aqui dentro vai o comentario     -->
+ <input type="text" id="nome">              <!-- essa linha cria o campo de entrada-->
+ <button onclick="nome()">nome</button>     <!-- esse é o botão que aciona a função que captura o valor-->   
 </body>
 <script>
+                                                    // comentarios em javacript são feitos com duas barras inclinadas
 function nome(){
-    let nome = document.getElementById("nome").value
-    console.log(nome)
+    let nome = document.getElementById("nome").type // essa linha cria e armazena na variável o valor do input
+    console.log(nome)                               //mostra o valor console do navegador
+
+    // percebam como os comentários do html e do javascript são diferentes
 }
 </script>
 </html>
