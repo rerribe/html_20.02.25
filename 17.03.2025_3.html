@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Input Range com onchange</title>
+    <style>
+        .largura_barra{
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
 
     <h2>Selecione um valor:</h2>
     
-    <input type="range" id="meuRange" min="0" max="100" value="50" oninput="atualizarValor()">
+    <input type="range" id="meuRange" class="largura_barra" min="0" max="100" value="50" oninput="atualizarValor()">
     <p>Valor selecionado: <span id="valorSelecionado">50</span></p>
+    <p>Valor elevado ao quadrado: <span id="valorQuadrado"></span></p>
+    <p>Valor elevado ao cubo : <span id="valorCubico"></span></p>
 
     <script>
         function atualizarValor() {
             var valor = document.getElementById("meuRange").valueAsNumber;
             console.log(typeof(valor))
             document.getElementById("valorSelecionado").innerText = valor;
+            document.getElementById("valorQuadrado").innerText = valor * valor;
+            document.getElementById("valorCubico").innerText = valor **3;
         }
     </script>
 
