@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Input Range com onchange</title>
+</head>
+<body>
+
+    <h2>Selecione um valor:</h2>
+    
+    <input type="range" id="meuRange" min="0" max="100" value="50" oninput="atualizarValor()">
+    <p>Valor selecionado: <span id="valorSelecionado">50</span></p>
+
+    <script>
+        function atualizarValor() {
+            var valor = document.getElementById("meuRange").valueAsNumber;
+            console.log(typeof(valor))
+            document.getElementById("valorSelecionado").innerText = valor;
+        }
+    </script>
+
+</body>
+</html>

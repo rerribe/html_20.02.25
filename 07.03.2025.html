@@ -9,12 +9,15 @@
                                             <!-- aqui dentro vai o comentario     -->
  <input type="text" id="nome">              <!-- essa linha cria o campo de entrada-->
  <button onclick="nome()">nome</button>     <!-- esse é o botão que aciona a função que captura o valor-->   
+ <p id="pudim"></p>
 </body>
+
 <script>
                                                     // comentarios em javacript são feitos com duas barras inclinadas
 function nome(){
-    let nome = document.getElementById("nome").type // essa linha cria e armazena na variável o valor do input
+    let nome = document.getElementById("nome").value // essa linha cria e armazena na variável o valor do input
     console.log(nome)                               //mostra o valor console do navegador
+    document.getElementById("pudim").innerHTML = nome
 
     // percebam como os comentários do html e do javascript são diferentes
 }

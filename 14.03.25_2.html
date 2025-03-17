@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onmouseover="sobre()" onmouseout="fora()">Click me</button>
+
+<p id="demo"></p>
+
+<p>uma função é chamada quando o botao é clicado.</p> 
+<p>A função injeta um texto em um elemento com a id="demo".</p>
+
+<script>
+    function sobre() {
+        document.getElementById("demo").innerHTML = "Olá mundo";
+    }
+    function fora() {
+        document.getElementById("demo").innerHTML = "";
+    }
+</script>
+
+</body>
+</html>

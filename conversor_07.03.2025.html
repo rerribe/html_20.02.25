@@ -5,22 +5,33 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="entrada" placeholder="valor em milhas terrestres">
-    <input type="text" id="nautico" placeholder=" de km para milhas nauticas">
+    <input type="text" id="entrada" placeholder="converter de milhas terrestres">
+    <input type="text" id="nautico" placeholder=" converter de milhas nauticas">
     <button onclick="converter()">Converter</button>
-    <p id="resposta"></p>
+    <br>
+    <p id="resposta" style="width: fit-content;display: inline;"></p>km/h<br>
     <p id="resposta_nautica"></p>
+
 </body>
 <script>
     function converter(){
         let valor = Number(document.getElementById("entrada").value)
         let milhas_nauticas = Number(document.getElementById("nautico").value)
         
-        let convertido = valor * 1.609344            // de mph para  km/h
-        let nautical_mile = milhas_nauticas * 1.852  // de knot para km/h
+        const valor_milha = 1.609344
+
+        let convertido = valor * valor_milha          
+        let nautical_mile = milhas_nauticas * 1.852 
         
-        document.getElementById("resposta").innerHTML = convertido+("km/h")
-        document.getElementById("resposta_nautica").innerHTML = nautical_mile+("km/h")
+        valor_milha = 2.25345
+        console.log(valor_milha)
+        document.getElementById("resposta").innerHTML = convertido
+        document.getElementById("resposta_nautica").innerHTML = nautical_mile
+
+        let volta_milha = document.getElementById("resposta").innerHTML
+        console.log(Number(volta_milha))
+        let volta_milha_convertido = volta_milha / 1.609344
+        console.log(volta_milha_convertido)
     }
     
 </script>
