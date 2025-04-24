@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 pagina</title>
+    <style>
+        .borda{
+            border: solid 5px red;
+            border-radius: 10px;
+            width: fit-content;
+        }
+        .imagem{
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+        }
+        #img2{
+            border: solid 3px blue;
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+        }
+        a {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>primeira pagina</h1>
+    <div class="borda">
+        <a href="ex2.html" class="borda">primeiro</a>
+        <a href="ex3.html" class="borda">segundo</a>
+        <a href="ex4.html" class="borda">terceiro</a>
+        <a href="#fim">ir para o fim da pagina</a>
+        <a href="#img1">imagem 1</a>
+        <a href="#img2">imagem 2</a>
+        <a href="#img3">imagem 3</a>
+    </div>
+    
+    <img src="imagens/pets.png" id="img1" alt="">
+    <img src="imagens/foto_1.jpg"id="img2" style="display: block;" alt="">
+    <img src="imagens/fotos_3.jpg" id="img3" class="imagem" alt="">
+    <div id="fim">
+        <p>fim da pagina</p>
+    </div>
+</body>
+</html>
